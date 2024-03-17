@@ -6,7 +6,7 @@ export default function CounterButton() {
     const [count, setCount] = useState(0);
 
     function incrementCount() {
-        setCount(count + 1);
+      setCount(count + 1);
     }
 
   return (

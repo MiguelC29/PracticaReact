@@ -4,9 +4,17 @@ import MyButton from './componentes/MyButton';
 import AboutPage from './componentes/AboutPage';
 import List from './componentes/List';
 import CounterButton from './componentes/CounterButton';
+import SimultaneousCounterButton from './componentes/SimultaneousCounterButton';
+import { useState } from 'react';
 
 function App() {
   const ISLOGGEDIN = true;
+
+  const [count, setCount] = useState(0);
+
+  function incrementCount() {
+    setCount(count + 1);
+  }
 
   return (
     // <div className="App">
@@ -33,6 +41,11 @@ function App() {
         <CounterButton />
         <br/>
         <CounterButton />
+        <br/>
+        <h1>Contadores que se actualizan juntos</h1>
+        <SimultaneousCounterButton count={count} onClick={incrementCount}/>
+        <br/>
+        <SimultaneousCounterButton count={count} onClick={incrementCount}/>
       </div>
       {(ISLOGGEDIN) ? <List /> : <AboutPage />}
     </div>
