@@ -24,12 +24,12 @@ export default function PokemonAxios() {
         <>
         <div>PokemonAxios</div>
             <div>
-                <ul>
+            <ul style={{listStyle: 'none'}}>
                     {listPokemon.map((pokemon, index) => (
                         <>
                         <li key={index}>
                             <p>{pokemon.name}</p>
-                            {/* <img src={pokemon.url} alt={"Foto de pokemon " + pokemon.name} /> */}
+                            <img src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + (index + 1) + ".png"} alt={"Foto de pokemon " + pokemon.name}/>
                         </li>
                         </>
                     ))}
