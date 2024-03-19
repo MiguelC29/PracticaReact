@@ -8,7 +8,10 @@ export default function Menu() {
       <h2>Menu</h2>
       <br/>
         <Link to="/">Personas</Link><span>     </span>
-        <Link to="Ventas">Ventas</Link>
+        <Link to="/Ventas">Ventas</Link>
+        <Link to="/PokemonFetch">Pokemon1</Link>
+        <Link to="/PokemonAxios">Pokemon2</Link>
+
     </div>
     </>
   )
