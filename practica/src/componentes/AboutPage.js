@@ -12,7 +12,7 @@ export default function AboutPage() {
     <>
       <h1>Acerca de</h1>
       {/* (someTrue && algo) si someTrue es verdadero se ejecuta algo, de lo contrario NO, con el operador or funciona similar, (someFalse || algo) si someFalse es falso se ejecuta algo, de lo contrario no*/}
-      <p>Hola{(USER.name.length > 1 && " --Hola " + USER.name)}.<br />¿Cómo vas?</p>
+      <p>Hola{(USER.name && " --Hola " + USER.name)}.<br />¿Cómo vas?</p>
       <img src={USER.imageUrl} alt='mano' className="avatar" style={{width: USER.imageWidth}}/>
     </>
   )

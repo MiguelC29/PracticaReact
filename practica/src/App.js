@@ -6,9 +6,11 @@ import List from './componentes/List';
 import CounterButton from './componentes/CounterButton';
 import SimultaneousCounterButton from './componentes/SimultaneousCounterButton';
 import { useState } from 'react';
+import Gallery from './componentes/Gallery';
+import ExButtonGroup from './componentes/ExButtonGroup';
 
 function App() {
-  const ISLOGGEDIN = true;
+  const ISLOGGEDIN = false;
 
   const [count, setCount] = useState(0);
 
@@ -48,6 +50,11 @@ function App() {
         <SimultaneousCounterButton count={count} onClick={incrementCount}/>
       </div>
       {(ISLOGGEDIN) ? <List /> : <AboutPage />}
+      
+      <div>
+        <Gallery />
+        <ExButtonGroup />
+      </div>
     </div>
   );
 }
